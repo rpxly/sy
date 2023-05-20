@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>摄影工作室 - 博客</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="favicon" rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../css/blog.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- 引入Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          integrity="sha512-8xk6EET69wUcwp6sfKki6nX7SYmwgmG6Kj7e02MnZxJ3HkMcRHhjrff7Qn+eD8DJNLqIXeOzZfsYgZ0sMD8K7g=="
+          crossorigin="anonymous"/>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var blogPostContents = document.querySelectorAll(".blog-post-content");
+
+            blogPostContents.forEach(function (content) {
+                content.classList.add("show");
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">TechLens</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+                <li><a href="../关于我们/Aboutus.html">关于我们</a></li>
+                <li>
+                    <a href="../作品/works.html">&nbsp;作品集&nbsp;</a>
+                    <ul class="sub-menu">
+                        <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
+                        <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
+                    </ul>
+                </li>
+                <li><a href="../服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
+                <li><a href="../博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
+                <li><a href="../联系我们/Contactus.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-content">
+        <div class="container">
+            <h1>TechLens 摄影工作室</h1>
+            <p>为您记录最美好的瞬间</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="blog-post">
+        <h2 class="blog-post-title">如何拍摄完美的人像照片</h2>
+        <p class="blog-post-meta">发布日期：2023年5月15日</p>
+        <div class="blog-post-content">
+            <p>
+                在人像摄影中，如何拍摄出完美的照片是摄影师们经常面临的挑战之一。以下是一些技巧和建议，帮助您拍摄出令人印象深刻的人像照片：</p>
+            <ul>
+                <li>选择合适的背景，以突出被摄主体。</li>
+                <li>使用适当的光线，避免阴影和过度曝光。</li>
+                <li>与被摄主体建立良好的沟通，让他们放松自然。</li>
+                <li>利用构图技巧和角度，突出被摄主体的特点。</li>
+            </ul>
+            <p>通过这些技巧，您可以提升人像摄影的质量，拍摄出令人满意的照片。</p>
+           <center> <img src="../../img/作品/人像/2.jpg" width="600px"alt="人像摄影"></center>
+        </div>
+    </div>
+    <div class="blog-post">
+        <h2 class="blog-post-title">探索大自然的美丽风景</h2>
+        <p class="blog-post-meta">发布日期：2023年5月20日</p>
+        <div class="blog-post-content">
+            <p>大自然的美丽风景给我们带来了无尽的惊喜和灵感。作为摄影师，如何捕捉和表达这些风景的美丽是一项重要的技巧。</p>
+            <p>以下是一些技巧，帮助您在风景摄影中获得出色的成果：</p>
+            <ul>
+                <li>选择合适的时机，例如日出或日落时的光线最为柔和。</li>
+                <li>注意景深，利用合适的光圈和对焦，使整个景观清晰可见。</li>
+                <li>寻找独特的视角和构图，以突出景观的独特之处。</li>
+                <li>利用过滤器和后期处理工具，增强照片的色彩和细节。</li>
+            </ul>
+            <p>通过运用这些技巧，您可以捕捉到大自然中最美丽的风景，并将其展示给观众。</p>
+           <center> <img src="../../img/作品/风景/6.jpg" width="600px"></center>
+        </div>
+    </div>
+</main>
+<!--返回顶部-->
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+
+<style>
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+<script>
+    function scrollToTop() {
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentPosition > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+    }
+
+    function toggleScrollToTop() {
+        var scrollToTopElement = document.getElementById("scrollToTop");
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentPosition > 300) {
+            scrollToTopElement.classList.add("show");
+        } else {
+            scrollToTopElement.classList.remove("show");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        window.addEventListener("scroll", function () {
+            toggleScrollToTop();
+        });
+    });
+</script>
+<!--返回顶部结束-->
+<footer>
+    <div class="container">
+        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
+    </div>
+</footer>
+</body>
+</html>

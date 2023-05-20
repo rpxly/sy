@@ -4,7 +4,9 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TechLens - 个人摄影工作室</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- 引入Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -63,9 +65,66 @@
             }
         }
     </script>
+    <style>
+        .loading-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
+        .loading-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .spinner {
+            border: 5px solid #578c80;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        var loadingContainer = document.querySelector('.loading-container');
+        var spinner = document.querySelector('.spinner');
+        var loadingText = document.querySelector('.loading-text');
+
+        // Show content after 0.5 seconds
+        function showContent() {
+            loadingContainer.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scrolling
+        }
+
+        // Display loading animation for 0.5 seconds
+        function displayLoadingAnimation() {
+            loadingContainer.style.display = 'flex';
+            setTimeout(showContent, 500);
+        }
+
+        // Call displayLoadingAnimation function on page load
+        displayLoadingAnimation();
+    });
+</script>
+<div class="loading-container">
+    <div class="loading-text">加载中...</div>
+    <div class="spinner"></div>
+</div>
 <header>
     <nav class="navbar">
         <div class="container">
@@ -79,29 +138,58 @@
                 <a href="#" class="navbar-brand">TechLens</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="#home">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
-                <li><a href="#about">关于我们</a></li>
-                <li><a href="#portfolio">&nbsp;作品集&nbsp;</a></li>
-                <li><a href="#services">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
-                <li><a href="#blog">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
-                <li><a href="#contact">联系我们</a></li>
+                <li><a href="#">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+                <li><a href="page/关于我们/Aboutus.html">关于我们</a>
+                </li>
+                <li>
+                    <a href="page/作品/works.html">&nbsp;作品集&nbsp;</a>
+                    <ul class="sub-menu">
+                        <li><a href="page/作品/scenery.html">风景摄影</a></li>
+                        <li><a href="page/作品/portrait.html">人像摄影</a></li>
+                    </ul>
+                </li>
+                <li><a href="page/服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
+                <li><a href="page/博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
+                <li><a href="page/联系我们/Contactus.html">联系我们</a></li>
             </ul>
         </div>
     </nav>
     <div class="header-content">
         <div class="container">
-            <h1>TechLens</h1>
+            <h1><img src="img/logo.png" width="20%" style="margin-bottom: -80px"></h1>
             <p>为您记录最美好的瞬间</p>
-            <a href="#portfolio" class="btn btn-primary btn-lg">查看我们的作品</a>
+            <a href="page/作品/works.html" class="btn btn-primary btn-lg">查看我们的作品</a>
         </div>
     </div>
 </header>
 
+<section>
+    <br>
+    <br>
+
+    <center>
+        <h2>关于我们</h2>
+        <br>
+        <video id="video" src="img/mp4.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted"
+               poster="img/1-1.jpg"></video>
+    </center>
+</section>
 <section id="about">
     <div class="container">
-        <h2>关于我们</h2>
         <p>
-            TechLens 是一家专业的个人摄影工作室，拥有一支充满激情和创意的摄影师团队。我们致力于为客户提供高质量的摄影服务，记录下他们最珍贵的瞬间。
+            欢迎来到我们的摄影工作室！我们是一支专注于创造精美摄影作品的团队，致力于捕捉美丽瞬间和表达独特故事的摄影师和艺术家。
+            <br>
+            我们的工作室提供广泛的摄影服务，包括人像摄影、婚礼摄影、家庭摄影、商业摄影等。无论您需要个人肖像、浪漫婚纱照、温馨全家福还是专业商业形象，我们都能为您创造出令人难忘的影像。
+        </p>
+        <p>
+            我们的团队具备丰富的摄影经验和专业知识，以及先进的摄影设备和后期处理技术。我们注重细节和创意，并努力与每位客户合作，以理解他们的愿望和需求，确保提供最佳的摄影体验和满意度。
+            <br>
+        </p>
+        <p>我们的摄影工作室追求卓越和艺术性，并且不断追求创新。我们通过巧妙运用光线、色彩和构图等元素，创造出独特的视觉效果和情感表达。我们致力于呈现每个人的美丽、故事和个性，使每张照片都成为独特的艺术品。
+        </p>
+        <p> 我们热爱摄影，享受与每个客户一起创造独特的摄影作品。我们的目标是通过我们的摄影艺术，为您带来难忘的瞬间，并让您感到满意和骄傲。无论是特殊场合还是日常生活，我们愿意与您合作，捕捉并留存珍贵的回忆。
+        </p>
+        <p>如果您正在寻找专业而富有创意的摄影服务，欢迎您来到我们的工作室。让我们一起创造出精美而难忘的摄影作品，为您带来美丽和喜悦！
         </p>
     </div>
 </section>
@@ -112,19 +200,19 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <img src="img/bg.jpg" alt="作品集 1"/>
+                    <img src="img/1-1.jpg" alt="作品集 1"/>
                     <div class="portfolio-overlay">
-                        <h3>作品集 1</h3>
-                        <a href="img/bg.jpg" class="btn btn-primary" target="_blank">查看大图</a>
+                        <h3>军旗升起的地方</h3>
+                        <a href="img/1-1.jpg" class="btn btn-primary" target="_blank">查看大图</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <img src="img/bg.jpg" alt="作品集 2"/>
+                    <img src="img/1-2.jpg" alt="作品集 2"/>
                     <div class="portfolio-overlay">
-                        <h3>作品集 2</h3>
-                        <a href="img/bg.jpg" class="btn btn-primary" target="_blank">查看大图</a>
+                        <h3>傍晚-我们</h3>
+                        <a href="img/1-2.jpg" class="btn btn-primary" target="_blank">查看大图</a>
                     </div>
                 </div>
             </div>
@@ -132,10 +220,10 @@
 
             <div class="col-md-4">
                 <div class="portfolio-item">
-                    <img src="img/bg.jpg" alt="作品集 3"/>
+                    <img src="img/1-3.jpg" alt="作品集 3"/>
                     <div class="portfolio-overlay">
-                        <h3>作品集 3</h3>
-                        <a href="img/bg.jpg" class="btn btn-primary" target="_blank">查看大图</a>
+                        <h3>你好！</h3>
+                        <a href="img/1-3.jpg" class="btn btn-primary" target="_blank">查看大图</a>
                     </div>
                 </div>
             </div>
@@ -145,23 +233,29 @@
 
 <section id="services">
     <div class="container">
-        <h2>服务</h2>
+        <center><h1>服务</h1></center>
+        <br>
+        <br>
+        <br>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-4">
                 <div class="service-item">
                     <i class="fa fa-camera"></i>
                     <h3>摄影服务</h3>
                     <p>我们提供各种类型的摄影服务，包括婚礼摄影、商业摄影和个人摄影。</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="service-item">
-                    <i class="fa fa-picture-o"></i>
+                    <i class="fa fa-cut"></i>
                     <h3>后期制作</h3>
                     <p>我们提供专业的后期制作服务，让您的照片更加精美。</p>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -171,35 +265,32 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="blog-item">
-                    <img src="img/bg.jpg" alt="博客 1"/>
-                    <h3>博客 1</h3>
+                    <img src="img/博客/1.jpg" alt="博客 1"/>
+                    <h3>如何拍摄完美的人像照片</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                        malesuada sapien quis velit eleifend.
+                        在人像摄影中，如何拍摄出完美的照片是摄影师们经常面临的挑战之一。以下是一些技巧和建议，帮助您拍摄出令人印象深刻的人像照片…
                     </p>
-                    <a href="#" class="btn btn-primary">阅读更多</a>
+                    <a href="page/博客/blog.html" class="btn btn-primary">阅读更多</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="blog-item">
-                    <img src="img/bg.jpg" alt="博客 2"/>
-                    <h3>博客 2</h3>
+                    <img src="img/博客/2.jpg" alt="博客 2"/>
+                    <h3>探索大自然的美丽风景</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                        malesuada sapien quis velit eleifend.
+                        大自然的美丽风景给我们带来了无尽的惊喜和灵感。作为摄影师，如何捕捉和表达这些风景的美丽是一项重要的技巧…
                     </p>
-                    <a href="#" class="btn btn-primary">阅读更多</a>
+                    <a href="page/博客/blog.html" class="btn btn-primary">阅读更多</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="blog-item">
-                    <img src="img/bg.jpg" alt="博客 1"/>
-                    <h3>博客 3</h3>
+                    <img src="img/博客/3.jpg" alt="博客 1"/>
+                    <h3>如何拍摄小清新人像照片</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                        malesuada sapien quis velit eleifend.
+                        要拍摄完美的小清新人像照片，有几点技巧需要注意。首先，选择在自然光线柔和的时候拍摄，避免强烈的直射阳光。
                     </p>
-                    <a href="#" class="btn btn-primary">阅读更多</a>
+                    <a href="page/博客/blog.html" class="btn btn-primary">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -212,23 +303,100 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="contact-info">
-                    <p><i class="fa fa-map-marker"></i>地址：xxxxxx</p>
-                    <p><i class="fa fa-phone"></i>电话：xxxxxx</p>
-                    <p><i class="fa fa-envelope"></i>电子邮件：xxxxxx</p>
+                    <p><i class="fa fa-map-marker"></i>地址：湖南省长沙市</p>
+                    <p><i class="fa fa-phone"></i>电话：13142086210</p>
+                    <p><i class="fa fa-envelope"></i>电子邮件：502780445@qq.com</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!--返回顶部-->
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+
+<style>
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+<script>
+    function scrollToTop() {
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentPosition > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+    }
+
+    function toggleScrollToTop() {
+        var scrollToTopElement = document.getElementById("scrollToTop");
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentPosition > 300) {
+            scrollToTopElement.classList.add("show");
+        } else {
+            scrollToTopElement.classList.remove("show");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        window.addEventListener("scroll", function () {
+            toggleScrollToTop();
+        });
+    });
+</script>
+<!--返回顶部结束-->
 <footer>
+    <center>
+        <div id="clock" class="clock"></div>
+    </center>
     <div class="container">
         <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
     </div>
 </footer>
-<!--返回顶部-->
+<script>
+    function updateTime() {
+        var clockElement = document.getElementById("clock");
+        var time = new Date();
 
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
 
+        var date = time.toLocaleDateString('zh-CN', {year: 'numeric', month: 'long', day: 'numeric'});
+        var dayOfWeek = time.toLocaleDateString('zh-CN', {weekday: 'long'});
+
+        clockElement.innerHTML = `
+        <div class="time">${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}</div>
+        <div class="date">${date}</div>
+        <div class="day">${dayOfWeek}</div>
+      `;
+    }
+
+    function formatTime(time) {
+        return time < 10 ? "0" + time : time;
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        updateTime();
+        setInterval(updateTime, 1000);
+    });
+</script>
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

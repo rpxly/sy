@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>关于我们-TechLens摄影工作室</title>
+    <link rel="stylesheet" href="../../css/Aboutus.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- 引入Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          integrity="sha512-8xk6EET69wUcwp6sfKki6nX7SYmwgmG6Kj7e02MnZxJ3HkMcRHhjrff7Qn+eD8DJNLqIXeOzZfsYgZ0sMD8K7g=="
+          crossorigin="anonymous"/>
+    <script type="text/javascript ">
+        window.onresize = auto;
+        auto()
+
+        function auto() {
+            var deviceWidth = document.documentElement.clientWidth;//获取设备宽度
+            if (deviceWidth > 1400) deviceWidth = 1400;//设置最大宽度
+            document.documentElement.style.fontSize = deviceWidth / 14 + 'px';//设置根元素字体大小
+        }
+
+        document.addEventListener('mousewheel', function (e) {
+            e = e || window.event;
+            if ((e.wheelDelta && event.ctrlKey) || e.detail) {//判断浏览器IE，谷歌滑轮事件
+                event.preventDefault();//阻止默认事件
+            }
+        }, {
+            capture: false,//是否捕获事件
+            passive: false//是否阻止默认事件
+        });
+
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">TechLens</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+                <li><a href="../关于我们/Aboutus.html">关于我们</a></li>
+                <li>
+                    <a href="../作品/works.html">&nbsp;作品集&nbsp;</a>
+                    <ul class="sub-menu">
+                        <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
+                        <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
+                    </ul>
+                </li>
+                <li><a href="../服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
+                <li><a href="../博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
+                <li><a href="../联系我们/Contactus.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-content">
+        <div class="container">
+            <h1>TechLens</h1>
+            <p>为您记录最美好的瞬间</p>
+            <a href="../../page/作品/works.html" class="btn btn-primary btn-lg">查看我们的作品</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <center><h1>摄影工作室 - 关于我们</h1></center>
+    <main>
+        <h1>欢迎来到我们的摄影工作室</h1>
+        <p>我们是一支专注于创造精美摄影作品的团队，致力于捕捉美丽瞬间和表达独特故事的摄影师和艺术家。</p>
+        <p>
+            我们的工作室提供广泛的摄影服务，包括人像摄影、婚礼摄影、家庭摄影、商业摄影等。无论您需要个人肖像、浪漫婚纱照、温馨全家福还是专业商业形象，我们都能为您创造出令人难忘的影像。
+        </p>
+        <p> 我们的团队具备丰富的摄影经验和专业知识，以及先进的摄影设备和后期处理技术。我们注重细节和创意，并努力与每位客户合作，以理解他们的愿望和需求，确保提供最佳的摄影体验和满意度。
+        </p>
+        <p> 我们的摄影工作室追求卓越和艺术性，并且不断追求创新。我们通过巧妙运用光线、色彩和构图等元素，创造出独特的视觉效果和情感表达。我们致力于呈现每个人的美丽、故事和个性，使每张照片都成为独特的艺术品。
+        </p>
+        <p> 我们热爱摄影，享受与每个客户一起创造独特的摄影作品。我们的目标是通过我们的摄影艺术，为您带来难忘的瞬间，并让您感到满意和骄傲。无论是特殊场合还是日常生活，我们愿意与您合作，捕捉并留存珍贵的回忆。
+        </p>
+        <p>如果您正在寻找专业而富有创意的摄影服务，欢迎您来到我们的工作室。让我们一起创造出精美而难忘的摄影作品，为您带来美丽和喜悦！
+        </p>
+        <h2>我们的团队</h2>
+        <div class="team">
+            <div class="team-member">
+                <a href="photographer1.html">
+                    <img src="../../img/关于我们/img_1.png" alt="摄影师1">
+                    <h3>张小明</h3>
+                    <p>资深婚礼摄影师</p></a>
+            </div>
+            <div class="team-member">
+                <a href="photographer2.html">
+                    <img src="../../img/关于我们/img_2.png" alt="摄影师2">
+                    <h3>章鱼哥
+                    </h3>
+                    <p>人像摄影师</p>
+                </a>
+            </div>
+            <div class="team-member">
+                <a href="photographer1.html"> <img src="../../img/关于我们/img_3.png" alt="摄影师3">
+                    <h3>李晓云</h3>
+                    <p>商业摄影师</p>
+                </a>
+            </div>
+        </div>
+    </main>
+</section>
+
+<!--返回顶部-->
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+
+<style>
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+<script>
+    function scrollToTop() {
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentPosition > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+    }
+
+    function toggleScrollToTop() {
+        var scrollToTopElement = document.getElementById("scrollToTop");
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentPosition > 300) {
+            scrollToTopElement.classList.add("show");
+        } else {
+            scrollToTopElement.classList.remove("show");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        window.addEventListener("scroll", function () {
+            toggleScrollToTop();
+        });
+    });
+</script>
+<!--返回顶部结束-->
+<footer>
+    <div class="container">
+        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
+    </div>
+</footer>
+
+</body>
+</html>

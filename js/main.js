@@ -74,3 +74,18 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
     modal.style.display = "none";
 }
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').addClass('show');
+        } else {
+            $('.back-to-top').removeClass('show');
+        }
+    });
+
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 800);
+        return false;
+    });
+});

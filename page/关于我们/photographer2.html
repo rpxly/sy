@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>摄影师介绍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .photographer-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .photographer-info img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .photographer-info h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .photographer-info p {
+            line-height: 1.6;
+        }
+
+
+        .slider-container {
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            flex: 0 0 20%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .slider-controls button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>摄影师介绍</h1>
+</header>
+
+<main>
+    <div class="photographer-info">
+        <img src="../../img/关于我们/img_2.png" alt="摄影师1">
+        <div>
+            <h2>🐙哥</h2>
+            <p>资深人像摄影师</p>
+            <p>非常高兴认识您！我是🐙哥，一名人像摄影师。我热爱摄影，并对捕捉人物的真实美和独特个性充满激情。</p>
+            <p>
+                多年来，我积累了丰富的摄影经验和广泛的艺术视野。我相信每个人都有自己独特的魅力和故事，我的目标是通过我的摄影艺术，展现并捕捉到每个人的独特之处。</p>
+            <p>
+                我注重细节和光线的运用，善于与模特建立良好的沟通和合作关系，使他们能够在拍摄中放松自然，展现最真实的一面。我善于运用环境和布景，以创造出令人难忘的背景与人物的融合。
+            </p>
+            <p> 作为一名人像摄影师，我相信每个人都有自己独特的美丽和个性。我的目标是通过精湛的技术和创意，捕捉到每个人的真实魅力和内在力量。我希望我的作品能够让每位客户感到自信和骄傲，并为他们创造出珍贵的回忆。
+            </p>
+            <p> 我使用专业的摄影设备和精细的后期处理技术，以确保为客户提供高品质的摄影作品。我注重细节、构图和色彩的处理，力求使每张照片都成为独特的艺术品。
+            </p>
+            <p> 如果您正在寻找一位富有热情、专业而创意的人像摄影师，我很荣幸能与您合作。无论是个人肖像、婚礼照片还是家庭合影，我将全力以赴，为您创造出令人难忘的摄影作品，展现您的真实美和个性魅力。期待与您共同创造美丽的瞬间！
+            </p>
+        </div>
+    </div>
+</main>
+
+<div class="slider-container">
+    <h3>代表作品</h3>
+    <div class="slider">
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(1).JPG" alt="Image 1">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(2).JPG" alt="Image 2">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(3).JPG" alt="Image 3">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(4).JPG" alt="Image 4">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(5).JPG" alt="Image 5">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(1).png" alt="Image 6">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(2).png" alt="Image 7">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(3).png" alt="Image 8">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(4).png" alt="Image 9">
+        </div>
+        <div class="slider-item">
+            <img src="../../img/关于我们/人像/r%20(5).png" alt="Image 10">
+        </div>
+    </div>
+    <div class="slider-controls">
+        <button id="prevButton">上一页</button>
+        <button id="nextButton">下一页</button>
+    </div>
+    <script>
+        const slider = document.querySelector('.slider');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const sliderItems = document.querySelectorAll('.slider-item');
+
+        let slidePosition = 0;
+        const slidesPerPage = 5;
+
+        function updateSliderPosition() {
+            slider.style.transform = `translateX(${slidePosition}px)`;
+        }
+
+        function prevSlide() {
+            slidePosition += sliderItems[0].clientWidth * slidesPerPage;
+            slidePosition = Math.min(slidePosition, 0);
+            updateSliderPosition();
+        }
+
+        function nextSlide() {
+            const maxSlidePosition = -(sliderItems.length - slidesPerPage) * sliderItems[0].clientWidth;
+            slidePosition -= sliderItems[0].clientWidth * slidesPerPage;
+            slidePosition = Math.max(slidePosition, maxSlidePosition);
+            updateSliderPosition();
+        }
+
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+        //自动滚动
+        var timer = setInterval(function () {
+            nextSlide();
+        }, 3000);
+    </script>
+</div>
+</body>
+</html>

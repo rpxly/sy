@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>摄影工作室 - 婚礼摄影</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .intro {
+            margin-bottom: 40px;
+        }
+
+        .intro-img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-content {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .intro-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .intro-description {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>摄影工作室 - 婚礼摄影</h1>
+</header>
+
+<main>
+    <div class="intro">
+        <img class="intro-img" src="../../img/服务/img.png" alt="婚礼摄影">
+        <div class="intro-content">
+            <h2 class="intro-title">创造美丽回忆</h2>
+            <p class="intro-description">
+                我们为您的特殊日子捕捉美丽的瞬间。无论是室内还是室外，我们的摄影师会利用专业的技术和创意，为您记录下梦幻般的婚礼瞬间。</p>
+        </div>
+    </div>
+    <h2>精选作品</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_1.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_2.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_3.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_4.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_5.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_6.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_7.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_8.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_9.png" alt="婚礼照片">
+        </div>
+        <div class="gallery-item">
+            <img src="../../img/关于我们/婚礼/img_1.png" alt="婚礼照片">
+        </div>
+    </div>
+</main>
+<!--返回顶部-->
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+
+<style>
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+<script>
+    function scrollToTop() {
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentPosition > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+    }
+
+    function toggleScrollToTop() {
+        var scrollToTopElement = document.getElementById("scrollToTop");
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentPosition > 300) {
+            scrollToTopElement.classList.add("show");
+        } else {
+            scrollToTopElement.classList.remove("show");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        window.addEventListener("scroll", function () {
+            toggleScrollToTop();
+        });
+    });
+</script>
+<!--返回顶部结束-->
+<footer>
+    <div class="container">
+        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
+    </div>
+</footer>
+
+</body>
+</html>

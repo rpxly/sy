@@ -1,0 +1,379 @@
+/* 导航栏样式 */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-colored {
+    background-color: #78817d;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+.nav-colored a {
+    color: #fff;
+}
+
+.nav-transparent {
+    background-color: transparent;
+    color: #000;
+    padding: 20px 0;
+}
+
+/* 添加 Animate.css 动画效果 */
+.nav-colored.animated {
+    animation-name: slideInDown;
+}
+
+.nav-transparent.animated {
+    animation-name: slideOutUp;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #0a251e;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+    padding-bottom: 10px;
+}
+
+nav ul li::before,
+nav ul li::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li::before {
+    top: 0;
+}
+
+nav ul li::after {
+    bottom: 0;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.sub-menu li {
+    margin-top: 28px;
+    display: block;
+    width: 80px;
+}
+
+.sub-menu li a {
+    color: #0a251e;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+li:hover .sub-menu {
+    display: block;
+}
+
+nav ul li:hover::before,
+nav ul li:hover::after {
+    transform: scaleX(1);
+    transition-delay: 0.2s;
+}
+
+nav ul li::before {
+    top: -10px;
+    transform-origin: left;
+}
+
+nav ul li::after {
+    bottom: -10px;
+    transform-origin: right;
+}
+
+/*nav ul li a:hover {*/
+/*    color: #c0c0c0;*/
+/*}*/
+
+
+/* 首页样式 */
+header {
+    background-image: url(../img/作品/风景/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-content {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-content h1 {
+    font-size: 64px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.header-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.header-content a {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: none; /*增加一个去掉边框*/
+}
+
+
+.header-content a:hover {
+    background-color: #78817d;
+    color: #fff;
+}
+
+/* 关于我们样式 */
+#about {
+    background-color: #f7f7f7;
+    padding: 80px 0;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* 作品集样式 */
+#portfolio {
+    padding: 80px 0;
+}
+
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-item {
+    margin-bottom: 40px;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+    opacity: 1;
+}
+
+.portfolio-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item-overlay h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.portfolio-item-overlay p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 服务项样式 */
+.service-item i {
+    color: #000;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* 博客样式 */
+#blog {
+    padding: 80px 0;
+    margin: 0;
+}
+
+#blog img {
+    width: 300px;
+}
+
+#blog h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-post {
+    margin-bottom: 40px;
+}
+
+.blog-post img {
+    width: 100%;
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* 联系我们样式 */
+#contact {
+    background-color: #fdfafa;
+    color: #0a0101;
+    padding: 20px 10px;
+}
+
+#contact .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    margin-bottom: 40px;
+}
+
+.contact-item i {
+    color: #fff;
+    font-size: 48px;
+    margin-right: 20px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #78817d;
+    color: #fff;
+    padding: 5px 0;
+    margin: 0;
+}
+
+footer p {
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.back-to-top:hover {
+    color: #fff;
+}
+
+.show {
+    display: block;
+}
+
+/* 媒体查询 */
+@media only screen and (max-width: 600px) {
+    nav {
+        height: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .slideshow-container {
+        height: 500px;
+        width: 100%;
+    }
+
+    .slide {
+        height: 500px;
+        width: 100%;
+    }
+}

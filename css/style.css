@@ -82,6 +82,33 @@ nav ul li::after {
     bottom: 0;
 }
 
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.sub-menu li {
+    margin-top: 28px;
+    display: block;
+    width: 80px;
+}
+
+.sub-menu li a {
+    color: #0a251e;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+li:hover .sub-menu {
+    display: block;
+    color: #ffffff;
+}
+
 nav ul li:hover::before,
 nav ul li:hover::after {
     transform: scaleX(1);
@@ -105,7 +132,7 @@ nav ul li::after {
 
 /* 首页样式 */
 header {
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/bd/1.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -144,10 +171,9 @@ header {
 }
 
 
-
 .header-content a:hover {
-    background-color: #78817d;
-    color: #fff;
+    background-color: #ffffff;
+    color: #0e0c0c;
 }
 
 /* 关于我们样式 */
@@ -155,6 +181,15 @@ header {
     background-color: #f7f7f7;
     padding: 80px 0;
 }
+
+video {
+    width: 80%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 
 #about h2 {
     text-align: center;
@@ -165,6 +200,8 @@ header {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 40px;
+    /*  首行缩进*/
+    text-indent: 2em;
 }
 
 /* 作品集样式 */
@@ -313,6 +350,21 @@ footer p {
     font-size: 16px;
     margin-bottom: 0;
     text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.back-to-top:hover {
+    color: #fff;
+}
+
+.show {
+    display: block;
 }
 
 /* 媒体查询 */
