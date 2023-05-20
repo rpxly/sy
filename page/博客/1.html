@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>如何拍摄完美的人像照片</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .blog-header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .blog-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .blog-date {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .blog-content {
+            padding: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .blog-content p {
+            margin-bottom: 20px;
+        }
+
+        .blog-footer {
+            padding: 20px;
+            background-color: #333;
+            text-align: right;
+        }
+
+        .blog-footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-footer a:hover {
+            color: #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var content = document.querySelector('.blog-content');
+            var paragraphs = content.getElementsByTagName('p');
+
+            // Add animation to paragraphs
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.opacity = 0;
+                paragraphs[i].style.transform = 'translateX(-20px)';
+                paragraphs[i].style.transition = 'opacity 0.5s ease, transform 0.5s ease ' + (i * 0.1) + 's';
+            }
+
+            setTimeout(function () {
+                for (var i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.opacity = 1;
+                    paragraphs[i].style.transform = 'translateX(0)';
+                }
+            }, 500);
+        });
+    </script>
+</head>
+<body>
+<div class="blog-container">
+    <div class="blog-header">
+        <h1 class="blog-title">如何拍摄完美的人像照片</h1>
+        <p class="blog-date">发布日期：2023年05月20日</p>
+    </div>
+    <div class="blog-content">
+        <p>
+            在人像摄影中，如何拍摄出完美的照片是摄影师们经常面临的挑战之一。以下是一些技巧和建议，帮助您拍摄出令人印象深刻的人像照片：</p>
+        <p>
+            选择合适的背景，以突出被摄主体。</p>
+        <p> 使用适当的光线，避免阴影和过度曝光。</p>
+        <p>与被摄主体建立良好的沟通，让他们放松自然。</p>
+        <p> 利用构图技巧和角度，突出被摄主体的特点。
+        </p>
+        <p>通过这些技巧，您可以提升人像摄影的质量，拍摄出令人满意的照片。</p>
+        <center><img src="../../img/作品/人像/2.jpg" width="600px" alt="人像摄影"></center>
+    </div>
+    <div class="blog-footer">
+        <p>感谢阅读！如果你有任何问题或者想法，欢迎<a href="../联系我们/Contactus.html">联系我</a>。</p>
+    </div>
+
+</div>
+
+<!--返回顶部-->
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+
+<style>
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        border-radius: 50%;
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+<script>
+    function scrollToTop() {
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentPosition > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+    }
+
+    function toggleScrollToTop() {
+        var scrollToTopElement = document.getElementById("scrollToTop");
+        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentPosition > 300) {
+            scrollToTopElement.classList.add("show");
+        } else {
+            scrollToTopElement.classList.remove("show");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        window.addEventListener("scroll", function () {
+            toggleScrollToTop();
+        });
+    });
+</script>
+<!--返回顶部结束-->
+<footer>
+    <center>
+        <div id="clock" class="clock"></div>
+    </center>
+    <div class="container">
+        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -64,6 +64,26 @@
             }
         }
     </script>
+    <script>
+        // 等待页面加载完成
+        window.addEventListener('load', function() {
+            // 获取社交媒体图标元素
+            var socialIcons = document.querySelectorAll('.social-icons li');
+
+            // 设置初始透明度为0
+            for (var i = 0; i < socialIcons.length; i++) {
+                socialIcons[i].style.opacity = '0';
+            }
+
+            // 将透明度设置为1，以实现淡入效果
+            setTimeout(function() {
+                for (var i = 0; i < socialIcons.length; i++) {
+                    socialIcons[i].style.opacity = '1';
+                }
+            }, 500);
+        });
+
+    </script>
 </head>
 <body>
 <header>
@@ -160,6 +180,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
+        border-radius: 50%;
     }
 
     .scroll-to-top.show {
@@ -196,7 +217,13 @@
 <!--返回顶部结束-->
 <footer>
     <div class="container">
-        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
+        <p>&copy; 2023 TechLens摄影工作室. All rights reserved.</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
     </div>
 </footer>
 

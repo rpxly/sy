@@ -111,17 +111,44 @@
     </div>
 </header>
 
-<main>
-    <div class="contact-form">
-        <center><input type="text" class="form-input" placeholder="您的姓名"> <br>
-            <input type="email" class="form-input" placeholder="您的邮箱">
-            <br>
-            <textarea class="form-input" placeholder="您的留言"></textarea>
-            <br>
-            <button class="submit-button">发送留言</button>
-        </center>
+<div class="contact-container">
+    <div class="contact-card">
+        <h1>联系我们</h1>
+        <p>如果您有任何疑问或需要进一步了解我们的服务，请随时与我们联系。</p>
+        <div class="contact-info">
+            <span class="contact-icon">&#9742;</span>
+            <p>电话：+1 234 567 890</p>
+        </div>
+        <div class="contact-info">
+            <span class="contact-icon">&#9993;</span>
+            <p>电子邮件：info@example.com</p>
+        </div>
+        <div class="contact-info">
+            <span class="contact-icon">&#127758;</span>
+            <p>地址：1234 Main Street, City, Country</p>
+        </div>
+        <br>
     </div>
-</main>
+    <div class="contact-card">
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>您也可以在下方留下您的信息，我们将尽快与您联系：</p>
+        <form>
+            <input type="text" placeholder="姓名" required>
+            <input type="email" placeholder="电子邮件地址" required>
+            <textarea placeholder="留言" required></textarea>
+            <button type="submit">发送</button>
+        </form>
+        <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
 <!--返回顶部-->
 <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
 
@@ -137,6 +164,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
+        border-radius: 50%;
     }
 
     .scroll-to-top.show {

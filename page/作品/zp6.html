@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>照片参数页面</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(120, 129, 125);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .photo {
+            width: 700px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .photo h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .photo p {
+            margin: 0;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var photos = document.querySelectorAll('.photo');
+
+            // Add hover effect to photos
+            photos.forEach(function(photo) {
+                photo.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';
+                });
+
+                photo.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>照片参数页面</h1>
+<div class="photo-container">
+    <div class="photo">
+        <img src="../../img/作品/风景/6.jpg" alt="Photo 1">
+        <h3>缥缈倒影</h3>
+        <p>拍摄日期：2023年05月18日</p>
+        <p>拍摄地点：中国江西省南昌市</p>
+        <p>拍摄器材：富士X-H2</p>
+        <p>焦距：85mm</p>
+        <p>快门速度：1/100秒</p>
+        <p>光圈：f/2.8</p>
+        <p>ISO：200</p>
+    </div>
+</div>
+</body>
+</html>
