@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TechLens - 个人摄影工作室</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- 引入Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          integrity="sha512-8xk6EET69wUcwp6sfKki6nX7SYmwgmG6Kj7e02MnZxJ3HkMcRHhjrff7Qn+eD8DJNLqIXeOzZfsYgZ0sMD8K7g=="
+          crossorigin="anonymous"/>
+    <script type="text/javascript ">
+        window.onresize = auto;
+        auto()
+
+        function auto() {
+            var deviceWidth = document.documentElement.clientWidth;//获取设备宽度
+            if (deviceWidth > 1400) deviceWidth = 1400;//设置最大宽度
+            document.documentElement.style.fontSize = deviceWidth / 14 + 'px';//设置根元素字体大小
+        }
+
+        document.addEventListener('mousewheel', function (e) {
+            e = e || window.event;
+            if ((e.wheelDelta && event.ctrlKey) || e.detail) {//判断浏览器IE，谷歌滑轮事件
+                event.preventDefault();//阻止默认事件
+            }
+        }, {
+            capture: false,//是否捕获事件
+            passive: false//是否阻止默认事件
+        });
+
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+                alert("禁止查看源码");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">TechLens</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#home">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#portfolio">&nbsp;作品集&nbsp;</a></li>
+                <li><a href="#services">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
+                <li><a href="#blog">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-content">
+        <div class="container">
+            <h1>TechLens</h1>
+            <p>为您记录最美好的瞬间</p>
+            <a href="#portfolio" class="btn btn-primary btn-lg">查看我们的作品</a>
+        </div>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <h2>关于我们</h2>
+        <p>
+            TechLens 是一家专业的个人摄影工作室，拥有一支充满激情和创意的摄影师团队。我们致力于为客户提供高质量的摄影服务，记录下他们最珍贵的瞬间。
+        </p>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="container">
+        <h2>作品集</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img src="img/bg.jpg" alt="作品集 1"/>
+                    <div class="portfolio-overlay">
+                        <h3>作品集 1</h3>
+                        <a href="img/bg.jpg" class="btn btn-primary" target="_blank">查看大图</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img src="img/bg.jpg" alt="作品集 2"/>
+                    <div class="portfolio-overlay">
+                        <h3>作品集 2</h3>
+                        <a href="img/bg.jpg" class="btn btn-primary" target="_blank">查看大图</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="portfolio-item">
+                    <img src="img/bg.jpg" alt="作品集 3"/>
+                    <div class="portfolio-overlay">
+                        <h3>作品集 3</h3>
+                        <a href="img/bg.jpg" class="btn btn-primary" target="_blank">查看大图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>服务</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service-item">
+                    <i class="fa fa-camera"></i>
+                    <h3>摄影服务</h3>
+                    <p>我们提供各种类型的摄影服务，包括婚礼摄影、商业摄影和个人摄影。</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-item">
+                    <i class="fa fa-picture-o"></i>
+                    <h3>后期制作</h3>
+                    <p>我们提供专业的后期制作服务，让您的照片更加精美。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog">
+    <div class="container">
+        <h2>博客</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="blog-item">
+                    <img src="img/bg.jpg" alt="博客 1"/>
+                    <h3>博客 1</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                        malesuada sapien quis velit eleifend.
+                    </p>
+                    <a href="#" class="btn btn-primary">阅读更多</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-item">
+                    <img src="img/bg.jpg" alt="博客 2"/>
+                    <h3>博客 2</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                        malesuada sapien quis velit eleifend.
+                    </p>
+                    <a href="#" class="btn btn-primary">阅读更多</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="blog-item">
+                    <img src="img/bg.jpg" alt="博客 1"/>
+                    <h3>博客 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                        malesuada sapien quis velit eleifend.
+                    </p>
+                    <a href="#" class="btn btn-primary">阅读更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>联系我们</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact-info">
+                    <p><i class="fa fa-map-marker"></i>地址：xxxxxx</p>
+                    <p><i class="fa fa-phone"></i>电话：xxxxxx</p>
+                    <p><i class="fa fa-envelope"></i>电子邮件：xxxxxx</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
+    </div>
+</footer>
+<!--返回顶部-->
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
