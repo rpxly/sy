@@ -64,6 +64,7 @@
         .blog-footer a:hover {
             color: #ccc;
         }
+
         footer {
             text-align: center;
             padding: 3px;
@@ -93,86 +94,158 @@
     </script>
 </head>
 <body>
-<div class="blog-container">
-    <div class="blog-header">
-        <h1 class="blog-title">如何拍摄完美的人像照片</h1>
-        <p class="blog-date">发布日期：2023年05月20日</p>
+<div class="cd-fold-content single-page">
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1 class="blog-title">如何拍摄完美的人像照片</h1>
+            <p class="blog-date">发布日期：2023年05月20日</p>
+        </div>
+        <div class="blog-content">
+            <p>
+                在人像摄影中，如何拍摄出完美的照片是摄影师们经常面临的挑战之一。以下是一些技巧和建议，帮助您拍摄出令人印象深刻的人像照片：</p>
+            <p>
+                选择合适的背景，以突出被摄主体。</p>
+            <p> 使用适当的光线，避免阴影和过度曝光。</p>
+            <p>与被摄主体建立良好的沟通，让他们放松自然。</p>
+            <p> 利用构图技巧和角度，突出被摄主体的特点。
+            </p>
+            <p>通过这些技巧，您可以提升人像摄影的质量，拍摄出令人满意的照片。</p>
+            <center><img src="../../img/关于我们/人像/r%20(3).png" width="600px" alt="人像摄影"></center>
+        </div>
+        <div class="blog-footer">
+            <p>感谢阅读！如果你有任何问题或者想法，欢迎<a href="../联系我们/Contactus.html">联系我</a>。</p>
+        </div>
+
     </div>
-    <div class="blog-content">
-        <p>
-            在人像摄影中，如何拍摄出完美的照片是摄影师们经常面临的挑战之一。以下是一些技巧和建议，帮助您拍摄出令人印象深刻的人像照片：</p>
-        <p>
-            选择合适的背景，以突出被摄主体。</p>
-        <p> 使用适当的光线，避免阴影和过度曝光。</p>
-        <p>与被摄主体建立良好的沟通，让他们放松自然。</p>
-        <p> 利用构图技巧和角度，突出被摄主体的特点。
-        </p>
-        <p>通过这些技巧，您可以提升人像摄影的质量，拍摄出令人满意的照片。</p>
-        <center><img src="../../img/作品/人像/2.jpg" width="600px" alt="人像摄影"></center>
-    </div>
-    <div class="blog-footer">
-        <p>感谢阅读！如果你有任何问题或者想法，欢迎<a href="../联系我们/Contactus.html">联系我</a>。</p>
-    </div>
 
-</div>
+    <!--返回顶部-->
+    <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
 
-<!--返回顶部-->
-<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
-
-<style>
-    .scroll-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #333;
-        color: #fff;
-        padding: 10px 20px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        border-radius: 50%;
-    }
-
-    .scroll-to-top.show {
-        opacity: 1;
-        visibility: visible;
-    }
-</style>
-<script>
-    function scrollToTop() {
-        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-        if (currentPosition > 0) {
-            window.requestAnimationFrame(scrollToTop);
-            window.scrollTo(0, currentPosition - currentPosition / 8);
+    <style>
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            border-radius: 50%;
         }
-    }
 
-    function toggleScrollToTop() {
-        var scrollToTopElement = document.getElementById("scrollToTop");
-        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (currentPosition > 300) {
-            scrollToTopElement.classList.add("show");
-        } else {
-            scrollToTopElement.classList.remove("show");
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
         }
-    }
+    </style>
+    <script>
+        function scrollToTop() {
+            var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            if (currentPosition > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, currentPosition - currentPosition / 8);
+            }
+        }
 
-    document.addEventListener("DOMContentLoaded", function (event) {
-        window.addEventListener("scroll", function () {
-            toggleScrollToTop();
+        function toggleScrollToTop() {
+            var scrollToTopElement = document.getElementById("scrollToTop");
+            var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (currentPosition > 300) {
+                scrollToTopElement.classList.add("show");
+            } else {
+                scrollToTopElement.classList.remove("show");
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            window.addEventListener("scroll", function () {
+                toggleScrollToTop();
+            });
         });
-    });
-</script>
-<!--返回顶部结束-->
-<footer>
-    <center>
-        <div id="clock" class="clock"></div>
-    </center>
-    <div class="container">
-        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
-    </div>
-</footer>
+    </script>
+    <!--返回顶部结束-->
+    <footer>
+        <center>
+            <div id="clock" class="clock"></div>
+        </center>
+        <div class="container">
+            <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
+<script src="../../js/jquery-2.1.1.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        /* open folding content */
+        $('.cd-gallery a').on('click', function (event) {
+            event.preventDefault();
+            openItemInfo($(this).attr('href'));
+        });
+
+        /* close folding content */
+        $('.cd-folding-panel .cd-close').on('click', function (event) {
+            event.preventDefault();
+            toggleContent('', false);
+        });
+        $('.cd-gallery').on('click', function (event) {
+            /* detect click on .cd-gallery::before when the .cd-folding-panel is open */
+            if ($(event.target).is('.cd-gallery') && $('.fold-is-open').length > 0) toggleContent('', false);
+        })
+
+        function openItemInfo(url) {
+            var mq = viewportSize();
+            if ($('.cd-gallery').offset().top > $(window).scrollTop() && mq != 'mobile') {
+                /* if content is visible above the .cd-gallery - scroll before opening the folding panel */
+                $('body,html').animate({
+                    'scrollTop': $('.cd-gallery').offset().top
+                }, 100, function () {
+                    toggleContent(url, true);
+                });
+
+            } else {
+                toggleContent(url, true);
+            }
+        }
+
+        function toggleContent(url, bool) {
+            if (bool) {
+                /* load and show new content */
+                var foldingContent = $('.cd-fold-content');
+                foldingContent.load(url + ' .cd-fold-content > *', function (event) {
+                    setTimeout(function () {
+                        $('body').addClass('overflow-hidden');
+                        $('.cd-folding-panel').addClass('is-open');
+                        $('.cd-main').addClass('fold-is-open');
+                    }, 100);
+
+                });
+            } else {
+                /* close the folding panel */
+                var mq = viewportSize();
+                $('.cd-folding-panel').removeClass('is-open');
+                $('.cd-main').removeClass('fold-is-open');
+
+                (mq == 'mobile' || $('.no-csstransitions').length > 0)
+                    /* according to the mq, immediately remove the .overflow-hidden or wait for the end of the animation */
+                    ? $('body').removeClass('overflow-hidden')
+
+                    : $('.cd-main').find('.cd-item').eq(0).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
+                        $('body').removeClass('overflow-hidden');
+                        $('.cd-main').find('.cd-item').eq(0).off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                    });
+            }
+
+        }
+
+        function viewportSize() {
+            /* retrieve the content value of .cd-main::before to check the actua mq */
+            return window.getComputedStyle(document.querySelector('.cd-main'), '::before').getPropertyValue('content');
+        }
+    });
+</script>

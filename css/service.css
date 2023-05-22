@@ -5,6 +5,7 @@ nav {
     left: 0;
     width: 100%;
     padding: 20px 0;
+    background-color: #fdfafa;
     z-index: 999;
     transition: all 0.3s ease-in-out;
 }
@@ -68,6 +69,10 @@ nav ul li {
     top: 100%;
     left: 0;
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* 圆角*/
+    border-radius: 5px;
 }
 
 .sub-menu li {
@@ -94,7 +99,7 @@ nav ul li::after {
     content: '';
     width: 100%;
     height: 2px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(120, 129, 125);
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
@@ -131,7 +136,7 @@ nav ul li::after {
 
 /* 首页样式 */
 header {
-    background-image: url("../img/bd/2.jpg");
+    background-image: url("../img/服务/img_12.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

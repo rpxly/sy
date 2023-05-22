@@ -97,6 +97,7 @@
             }
         }
     </style>
+
 </head>
 <body>
 <script>
@@ -122,9 +123,10 @@
     });
 </script>
 <div class="loading-container">
-    <div class="loading-text">加载中...</div>
+    <div class="loading-text"></div>
     <div class="spinner"></div>
 </div>
+<!--头部开始-->
 <header>
     <nav class="navbar">
         <div class="container">
@@ -135,12 +137,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">TechLens</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="#">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
-                <li><a href="page/关于我们/Aboutus.html">关于我们</a>
+                <li style="pointer-events: none;>
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo" class="logo" width="100px">
+                    </a>
                 </li>
+                <li><a href="index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+                <li><a href="page/关于我们/Aboutus.html">关于我们</a></li>
                 <li>
                     <a href="page/作品/works.html">&nbsp;作品集&nbsp;</a>
                     <ul class="sub-menu">
@@ -154,28 +159,44 @@
             </ul>
         </div>
     </nav>
-    <div class="header-content">
-        <div class="container">
-            <h1><img src="img/logo.png" width="20%" style="margin-bottom: -80px"></h1>
-            <p>为您记录最美好的瞬间</p>
-            <a href="page/作品/works.html" class="btn btn-primary btn-lg">查看我们的作品</a>
-        </div>
-    </div>
 </header>
 
+<!--头部结束-->
+<!--轮播图开始-->
 <section>
-    <br>
-    <br>
+    <div class="slideshow">
+        <img src="img/轮播图/1.JPG" alt="摄影作品1" class="active">
+        <img src="img/轮播图/2.JPG" alt="摄影作品2">
+        <img src="img/轮播图/3.png" alt="摄影作品3">
+        <img src="img/轮播图/4.JPG" alt="摄影作品4">
+    </div>
+    <script>
+        var images = document.querySelectorAll('.slideshow img');
+        var currentImageIndex = 0;
 
-    <center>
-        <h2>关于我们</h2>
-        <br>
-        <video id="video" src="img/mp4.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted"
-               poster="img/1-1.jpg"></video>
-    </center>
+        function nextImage() {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
+        }
+
+        setInterval(nextImage, 3000);
+    </script>
 </section>
+<!--轮播图结束-->
+
 <section id="about">
     <div class="container">
+        <h2 style="background: linear-gradient(45deg, #578c80, #78817d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">关于我们</h2>
+        <div>
+            <center>
+                <br>
+                <video id="video" src="img/mp4.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted"
+                       poster="img/1-1.jpg"></video>
+            </center>
+        </div>
         <p>
             欢迎来到我们的摄影工作室！我们是一支专注于创造精美摄影作品的团队，致力于捕捉美丽瞬间和表达独特故事的摄影师和艺术家。
             <br>
@@ -191,12 +212,15 @@
         </p>
         <p>如果您正在寻找专业而富有创意的摄影服务，欢迎您来到我们的工作室。让我们一起创造出精美而难忘的摄影作品，为您带来美丽和喜悦！
         </p>
+        <hr/>
     </div>
 </section>
 
 <section id="portfolio">
     <div class="container">
-        <h2>作品集</h2>
+        <h2 style="  background: linear-gradient(45deg, #578c80, #78817d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">作品集</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="portfolio-item">
@@ -233,7 +257,9 @@
 
 <section id="services">
     <div class="container">
-        <center><h1>服务</h1></center>
+        <center><h1 tyle="  background: linear-gradient(45deg, #578c80, #78817d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">服务</h1></center>
         <br>
         <br>
         <br>
@@ -255,22 +281,35 @@
                 </div>
             </div>
         </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="service-item">
+                    <center><h1 tyle="  background: linear-gradient(45deg, #578c80, #78817d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">流程</h1></center>
+                </div>
+                <img src="img/服务/img_5.png" alt="服务流程"/>
+            </div>
+        </div>
 
     </div>
 </section>
 
 <section id="blog">
     <div class="container">
-        <h2>博客</h2>
+        <h2 tyle="  background: linear-gradient(45deg, #578c80, #78817d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">博客</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="blog-item">
-                    <img src="img/博客/1.jpg" alt="博客 1"/>
+                    <img class="parallax-demo-1" src="img/博客/1.jpg" alt="博客 1"/>
                     <h3>如何拍摄完美的人像照片</h3>
                     <p>
                         在人像摄影中，如何拍摄出完美的照片是摄影师们经常面临的挑战之一。以下是一些技巧和建议，帮助您拍摄出令人印象深刻的人像照片…
                     </p>
-                    <a href="page/博客/blog.html" class="btn btn-primary">阅读更多</a>
+                    <a  href="page/博客/1.html" class="btn btn-primary">阅读更多</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -280,7 +319,7 @@
                     <p>
                         大自然的美丽风景给我们带来了无尽的惊喜和灵感。作为摄影师，如何捕捉和表达这些风景的美丽是一项重要的技巧…
                     </p>
-                    <a href="page/博客/blog.html" class="btn btn-primary">阅读更多</a>
+                    <a href="page/博客/2.html" class="btn btn-primary">阅读更多</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -290,16 +329,92 @@
                     <p>
                         要拍摄完美的小清新人像照片，有几点技巧需要注意。首先，选择在自然光线柔和的时候拍摄，避免强烈的直射阳光。
                     </p>
-                    <a href="page/博客/blog.html" class="btn btn-primary">阅读更多</a>
+                    <a href="page/博客/3.html" class="btn btn-primary">阅读更多</a>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $('.parallax-demo-1').parallaxBackground();
+    </script>
 </section>
+<section>
+    <br>
+    <hr>
+    <div class="photo-slider">
+        <div class="slider-content">
+            <img src="img/作品/风景/10.jpg" alt="Photo 1">
+            <img src="img/作品/风景/1.jpg" alt="Photo 2">
+            <img src="img/作品/风景/2.jpg" alt="Photo 3">
+            <img src="img/作品/风景/3.jpg" alt="Photo 4">
+            <img src="img/作品/风景/4.jpg" alt="Photo 5">
+            <img src="img/作品/风景/5.jpg" alt="Photo 6">
+            <img src="img/作品/风景/6.jpg" alt="Photo 7">
+            <img src="img/作品/风景/7.jpg" alt="Photo 8">
+        </div>
+    </div>
+    <style>
+        .photo-slider {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
 
+        .slider-content {
+            display: flex;
+            animation: slide 10s infinite;
+        }
+
+        .slider-content img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <script>
+        // 等待页面加载完成后执行
+        document.addEventListener("DOMContentLoaded", function () {
+            // 获取滑动内容元素
+            var sliderContent = document.querySelector(".slider-content");
+
+            // 获取所有图片元素
+            var images = document.querySelectorAll(".slider-content img");
+
+            // 计算滑动内容的总宽度
+            var totalWidth = 0;
+            images.forEach(function (image) {
+                totalWidth += image.offsetWidth;
+            });
+
+            // 设置滑动内容的宽度为总宽度
+            sliderContent.style.width = totalWidth + "px";
+        });
+
+
+    </script>
+</section>
 <section id="contact">
+    <hr>
     <div class="container">
-        <h2>联系我们</h2>
+        <h2 tyle="  background: linear-gradient(45deg, #578c80, #78817d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">联系我们</h2>
         <div class="row">
             <div class="col-md-12">
                 <div class="contact-info">

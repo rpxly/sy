@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="../../css/contactus.css"/>
     <!-- 引入Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.min.css"/>
+`
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -74,39 +76,44 @@
     </script>
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand">TechLens</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
-                <li><a href="../关于我们/Aboutus.html">关于我们</a></li>
-                <li>
-                    <a href="../作品/works.html">&nbsp;作品集&nbsp;</a>
-                    <ul class="sub-menu">
-                        <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
-                        <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
-                    </ul>
-                </li>
-                <li><a href="../服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
-                <li><a href="../博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
-                <li><a href="../联系我们/Contactus.html">联系我们</a></li>
-            </ul>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
+        <ul class="nav navbar-nav">
+            <li style="pointer-events: none;">
+                <a href="../../index.html">
+                    <img src="../../img/logo.png" alt="logo" class="logo" width="80px">
+                </a>
+            </li>
+            <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+            <li><a href="../../page/关于我们/Aboutus.html">关于我们</a></li>
+            <li>
+                <a href="../../page/作品/works.html">&nbsp;作品集&nbsp;</a>
+                <ul class="sub-menu">
+                    <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
+                    <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
+                </ul>
+            </li>
+            <li><a href="../../page/服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
+            <li><a href="../../page/博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
+            <li><a href="../../page/联系我们/Contactus.html">联系我们</a></li>
+        </ul>
+    </div>
+</nav>
+<header>
+
     <div class="header-content">
         <div class="container">
             <h1>TechLens</h1>
             <p>为您记录最美好的瞬间</p>
-            <a href="#portfolio" class="btn btn-primary btn-lg">查看我们的作品</a>
+            <a href="../../page/作品/works.html" class="btn btn-primary btn-lg">查看我们的作品</a>
         </div>
     </div>
 </header>
@@ -125,28 +132,22 @@
         </div>
         <div class="contact-info">
             <span class="contact-icon">&#127758;</span>
-            <p>地址：1234 Main Street, City, Country</p>
+            <p>地址：云南省怒江傈僳族自治州兰坪白族普米族自治县营盘镇</p>
         </div>
-        <br>
-    </div>
-    <div class="contact-card">
-        <br>
-        <br>
-        <br>
         <br>
         <p>您也可以在下方留下您的信息，我们将尽快与您联系：</p>
         <form>
             <input type="text" placeholder="姓名" required>
+            <br>
+            <br>
             <input type="email" placeholder="电子邮件地址" required>
+            <br>
+            <br>
             <textarea placeholder="留言" required></textarea>
-            <button type="submit">发送</button>
+            <br>
+            <br>
+            <button type="submit">提交</button>
         </form>
-        <p></p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
 </div>
 <!--返回顶部-->

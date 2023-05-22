@@ -6,33 +6,12 @@ nav {
     width: 100%;
     padding: 20px 0;
     z-index: 999;
+    background-color: #f7f7f7;
     transition: all 0.3s ease-in-out;
-}
-
-.nav-colored {
-    background-color: #78817d;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
 }
 
 .nav-colored a {
     color: #fff;
-}
-
-.nav-transparent {
-    background-color: transparent;
-    color: #000;
-    padding: 20px 0;
-}
-
-/* 添加 Animate.css 动画效果 */
-.nav-colored.animated {
-    animation-name: slideInDown;
-}
-
-.nav-transparent.animated {
-    animation-name: slideOutUp;
 }
 
 nav ul {
@@ -62,13 +41,46 @@ nav ul li {
     padding-bottom: 10px;
 }
 
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.sub-menu li {
+    text-align: center;
+    margin-top: 28px;
+    width: 80px;
+}
+
+.sub-menu li a {
+    color: #0a251e;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.sub-menu li a:hover {
+    color: #c0c0c0;
+}
+li:hover .sub-menu {
+    display: block;
+}
+
 nav ul li::before,
 nav ul li::after {
     position: absolute;
     content: '';
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: rgb(19, 12, 12);
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
@@ -80,33 +92,6 @@ nav ul li::before {
 
 nav ul li::after {
     bottom: 0;
-}
-
-.sub-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-}
-
-.sub-menu li {
-    margin-top: 28px;
-    display: block;
-    width: 80px;
-}
-
-.sub-menu li a {
-    color: #0a251e;
-    font-size: 18px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-}
-
-li:hover .sub-menu {
-    display: block;
-    color: #ffffff;
 }
 
 nav ul li:hover::before,
@@ -125,61 +110,28 @@ nav ul li::after {
     transform-origin: right;
 }
 
+header {
+    position: relative;
+    background-color: rgba(120, 129, 125, 0.26);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 /*nav ul li a:hover {*/
 /*    color: #c0c0c0;*/
 /*}*/
 
-
 /* 首页样式 */
-header {
-    background-image: url(../img/bd/1.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
-.header-content {
-    color: #fff;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header-content h1 {
-    font-size: 64px;
-    margin-top: 0;
-    margin-bottom: 40px;
-}
-
-.header-content p {
-    font-size: 24px;
-    margin-bottom: 40px;
-}
-
-.header-content a {
-    display: inline-block;
-    background-color: #fff;
-    color: #000;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    border: none; /*增加一个去掉边框*/
-}
-
-
-.header-content a:hover {
-    background-color: #ffffff;
-    color: #0e0c0c;
-}
 
 /* 关于我们样式 */
 #about {
     background-color: #f7f7f7;
     padding: 80px 0;
+    /*圆角*/
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 video {
@@ -207,6 +159,8 @@ video {
 /* 作品集样式 */
 #portfolio {
     padding: 80px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #portfolio h2 {
@@ -222,20 +176,10 @@ video {
     width: 100%;
 }
 
-.portfolio-item:hover .portfolio-item-overlay {
+.portfolio-item:hover {
     opacity: 1;
 }
 
-.portfolio-item-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: all 0.3s ease;
-}
 
 .portfolio-item-overlay h3 {
     color: #fff;
@@ -251,6 +195,13 @@ video {
 }
 
 /* 服务项样式 */
+
+#services {
+    padding: 80px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 .service-item i {
     color: #000;
     font-size: 48px;
@@ -272,6 +223,8 @@ video {
 #blog {
     padding: 80px 0;
     margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #blog img {
@@ -280,10 +233,6 @@ video {
 
 #blog h2 {
     text-align: center;
-    margin-bottom: 40px;
-}
-
-.blog-post {
     margin-bottom: 40px;
 }
 
@@ -308,6 +257,8 @@ video {
     background-color: #fdfafa;
     color: #0a0101;
     padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #contact .contact-info {
@@ -319,10 +270,6 @@ video {
 
 #contact h2 {
     text-align: center;
-    margin-bottom: 40px;
-}
-
-.contact-item {
     margin-bottom: 40px;
 }
 
@@ -340,8 +287,8 @@ video {
 
 /* 页脚样式 */
 footer {
-    background-color: #78817d;
-    color: #fff;
+    background-color: #fdfafa;
+    color: #130c0c;
     padding: 5px 0;
     margin: 0;
 }
@@ -350,21 +297,6 @@ footer p {
     font-size: 16px;
     margin-bottom: 0;
     text-align: center;
-}
-
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-}
-
-.back-to-top:hover {
-    color: #fff;
-}
-
-.show {
-    display: block;
 }
 
 /* 媒体查询 */
@@ -388,4 +320,24 @@ footer p {
         height: 500px;
         width: 100%;
     }
+}
+
+/*轮播图*/
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
 }

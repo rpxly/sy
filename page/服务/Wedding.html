@@ -4,9 +4,14 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>摄影工作室 - 婚礼摄影</title>
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- 引入Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          integrity="sha512-8xk6EET69wUcwp6sfKki6nX7SYmwgmG6Kj7e02MnZxJ3HkMcRHhjrff7Qn+eD8DJNLqIXeOzZfsYgZ0sMD8K7g=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,10 +20,144 @@
             background-color: #f7f7f7;
         }
 
-        header {
-            background-color: #333;
+        /* 导航栏样式 */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.65);
+            z-index: 999;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-colored {
+            background-color: #78817d;
             color: #fff;
-            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 10px 0;
+        }
+
+        .nav-colored a {
+            color: #fff;
+        }
+
+        .nav-transparent {
+            background-color: transparent;
+            color: #000;
+            padding: 20px 0;
+        }
+
+        /* 添加 Animate.css 动画效果 */
+        .nav-colored.animated {
+            animation-name: slideInDown;
+        }
+
+        .nav-transparent.animated {
+            animation-name: slideOutUp;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #130c0c;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline-block;
+            margin-right: 40px;
+            padding-bottom: 10px;
+        }
+
+        .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            background-color: rgba(255, 255, 255, 0.65);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        /*    圆角*/
+            border-radius: 10px;
+        }
+
+        .sub-menu li {
+            margin-top: 28px;
+            display: block;
+            width: 80px;
+        }
+
+        .sub-menu li a {
+            color: rgb(19, 12, 12);
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        li:hover .sub-menu {
+            display: block;
+        }
+
+        nav ul li::before,
+        nav ul li::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: rgb(19, 12, 12);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li::before {
+            top: 0;
+        }
+
+        nav ul li::after {
+            bottom: 0;
+        }
+
+        nav ul li:hover::before,
+        nav ul li:hover::after {
+            transform: scaleX(1);
+            transition-delay: 0.2s;
+        }
+
+        nav ul li::before {
+            top: -10px;
+            transform-origin: left;
+        }
+
+        nav ul li::after {
+            bottom: -10px;
+            transform-origin: right;
+        }
+
+        header {
+            background-image: url("../../img/服务/img_11.png");
+            color: #fff;
+            padding:200px;
             text-align: center;
         }
 
@@ -43,6 +182,7 @@
 
         p {
             line-height: 1.6;
+            font-size: 16px;
         }
 
         .intro {
@@ -100,16 +240,50 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: rgb(120, 129, 125);
             color: #fff;
-            padding: 20px;
             text-align: center;
         }
     </style>
 </head>
 <body>
+<section>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="no-hover" style="pointer-events: none;">
+                    <a href="../../index.html">
+                        <img src="../../img/logo.png" alt="logo" class="logo" width="80px">
+                    </a>
+                </li>
+                <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+                <li><a href="../../page/关于我们/Aboutus.html">关于我们</a></li>
+                <li>
+                    <a href="../../page/作品/works.html">&nbsp;作品集&nbsp;</a>
+                    <ul class="sub-menu">
+                        <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
+                        <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../page/服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
+                <li><a href="../../page/博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
+                <li><a href="../../page/联系我们/Contactus.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<div class="cd-fold-content single-page">
 <header>
-    <h1>摄影工作室 - 婚礼摄影</h1>
+    <h1>婚礼摄影</h1>
+    <p>我们为您的特殊日子捕捉美丽的瞬间。无论是室内还是室外，我们的摄影师会利用专业的技术和创意，为您记录下梦幻般的婚礼瞬间。</p>
 </header>
 
 <main>
@@ -210,6 +384,76 @@
         <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
     </div>
 </footer>
+    </div>
+<script src="../../js/jquery-2.1.1.js"></script>
+<script>
+    jQuery(document).ready(function($){
+        /* open folding content */
+        $('.cd-gallery a').on('click', function(event){
+            event.preventDefault();
+            openItemInfo($(this).attr('href'));
+        });
 
+        /* close folding content */
+        $('.cd-folding-panel .cd-close').on('click', function(event){
+            event.preventDefault();
+            toggleContent('', false);
+        });
+        $('.cd-gallery').on('click', function(event){
+            /* detect click on .cd-gallery::before when the .cd-folding-panel is open */
+            if($(event.target).is('.cd-gallery') && $('.fold-is-open').length > 0 ) toggleContent('', false);
+        })
+
+        function openItemInfo(url) {
+            var mq = viewportSize();
+            if( $('.cd-gallery').offset().top > $(window).scrollTop() && mq != 'mobile') {
+                /* if content is visible above the .cd-gallery - scroll before opening the folding panel */
+                $('body,html').animate({
+                    'scrollTop': $('.cd-gallery').offset().top
+                }, 100, function(){
+                    toggleContent(url, true);
+                });
+
+            } else {
+                toggleContent(url, true);
+            }
+        }
+
+        function toggleContent(url, bool) {
+            if( bool ) {
+                /* load and show new content */
+                var foldingContent = $('.cd-fold-content');
+                foldingContent.load(url+' .cd-fold-content > *', function(event){
+                    setTimeout(function(){
+                        $('body').addClass('overflow-hidden');
+                        $('.cd-folding-panel').addClass('is-open');
+                        $('.cd-main').addClass('fold-is-open');
+                    }, 100);
+
+                });
+            } else {
+                /* close the folding panel */
+                var mq = viewportSize();
+                $('.cd-folding-panel').removeClass('is-open');
+                $('.cd-main').removeClass('fold-is-open');
+
+                (mq == 'mobile' || $('.no-csstransitions').length > 0 )
+                    /* according to the mq, immediately remove the .overflow-hidden or wait for the end of the animation */
+                    ? $('body').removeClass('overflow-hidden')
+
+                    : $('.cd-main').find('.cd-item').eq(0).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+                        $('body').removeClass('overflow-hidden');
+                        $('.cd-main').find('.cd-item').eq(0).off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                    });
+            }
+
+        }
+
+        function viewportSize() {
+            /* retrieve the content value of .cd-main::before to check the actua mq */
+            return window.getComputedStyle(document.querySelector('.cd-main'), '::before').getPropertyValue('content');
+        }
+    });
+</script>
 </body>
 </html>

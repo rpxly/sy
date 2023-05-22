@@ -1,206 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品集-TechLens摄影工作室</title>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../../css/works.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           integrity="sha512-8xk6EET69wUcwp6sfKki6nX7SYmwgmG6Kj7e02MnZxJ3HkMcRHhjrff7Qn+eD8DJNLqIXeOzZfsYgZ0sMD8K7g=="
           crossorigin="anonymous"/>
-    <script type="text/javascript ">
-        window.onresize = auto;
-        auto()
-
-        function auto() {
-            var deviceWidth = document.documentElement.clientWidth;//获取设备宽度
-            if (deviceWidth > 1400) deviceWidth = 1400;//设置最大宽度
-            document.documentElement.style.fontSize = deviceWidth / 14 + 'px';//设置根元素字体大小
-        }
-
-        document.addEventListener('mousewheel', function (e) {
-            e = e || window.event;
-            if ((e.wheelDelta && event.ctrlKey) || e.detail) {//判断浏览器IE，谷歌滑轮事件
-                event.preventDefault();//阻止默认事件
-            }
-        }, {
-            capture: false,//是否捕获事件
-            passive: false//是否阻止默认事件
-        });
-
-
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function (e) {
-            if (e.keyCode == 123) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-        }
-    </script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-    <!-- Custom JS -->
-    <script src="../../js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<!--头部开始-->
-<header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand">TechLens</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
-                <li><a href="../关于我们/Aboutus.html">关于我们</a></li>
-                <li>
-                    <a href="../作品/works.html">&nbsp;作品集&nbsp;</a>
-                    <ul class="sub-menu">
-                        <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
-                        <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
-                    </ul>
-                </li>
-                <li><a href="../服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
-                <li><a href="../博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
-                <li><a href="../联系我们/Contactus.html">联系我们</a></li>
-            </ul>
+<section>
+    <figure class="logo logo--top js-trigger">
+        <img src="img/logo.png">
+    </figure>
+
+    <a href="" target="_blank" class="resize">
+        <div class="resize__inner">
+            <figure class="logo logo--resize">
+                <img src="img/logo.svg">
+            </figure>
+            <p>请查看 <span>完整的页面</span> 模式</p>
         </div>
-    </nav>
-</header>
-<!--头部结束-->
-<!--轮播图开始-->
-<section>
-    <div class="slideshow">
-        <img src="../../img/轮播图/1.JPG" alt="摄影作品1" class="active">
-        <img src="../../img/轮播图/2.JPG" alt="摄影作品2">
-        <img src="../../img/轮播图/3.png" alt="摄影作品3">
-        <img src="../../img/轮播图/4.JPG" alt="摄影作品4">
+    </a>
+
+    <a href="portrait.html" target="_blank" class="hi">
+        人像
+    </a>
+
+    <a href="scenery.html" target="_blank" rel="nofollow" class="menu-btn js-menu-btn">
+        <div class="menu-btn__circles">
+            <span class="menu-btn__circle menu-btn__circle--top js-menu-btn__circle--top"></span>
+            <span class="menu-btn__circle menu-btn__circle--bottom js-menu-btn__circle--bottom"></span>
+        </div>
+        <div class="menu-btn__text">风景</div>
+    </a>
+
+    <div class="scroll" data-scroll>
+
+        <nav class="filter">
+            <ul class="filter__list">
+                <li class="filter__item">
+                    <a href="../../index.html" class="filter__link">
+                        <div class="filter__link-mask" area-hidden><span>首页</span></div>
+                        首页
+                    </a>
+                </li>
+                <li class="filter__item">
+                    <a href="../../page/关于我们/Aboutus.html" class="filter__link">
+                        <div class="filter__link-mask" area-hidden><span>关于我们</span></div>
+                        关于我们
+                    </a>
+                </li>
+                <li class="filter__item">
+                    <a href="../../page/作品/works.html" class="filter__link is-active">
+                        <div class="filter__link-mask" area-hidden><span>作品</span></div>
+                        作品
+                    </a>
+                </li>
+                <li class="filter__item">
+                    <a href="../../page/服务/service.html" class="filter__link">
+                        <div class="filter__link-mask" area-hidden><span>服务</span></div>
+                        服务
+                    </a>
+                </li>
+                <li class="filter__item">
+                    <a href="../../page/博客/blog.html" class="filter__link">
+                        <div class="filter__link-mask" area-hidden><span>博客</span></div>
+                        博客
+                    </a>
+                </li>
+                <li class="filter__item">
+                    <a href="../../page/联系我们/Contactus.html" class="filter__link js-trigger">
+                        <div class="filter__link-mask" area-hidden><span>联系我们</span></div>
+                        联系我们
+                    </a>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <div class="scroll-content" data-scroll-content>
+
+            <article class="slide slide--1 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__img js-transition-img">
+                        <figure class="js-transition-img__inner">
+                            <img src="img/project-one.jpg" draggable="false">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article class="slide slide--2 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__img js-transition-img">
+                        <figure class="js-transition-img__inner">
+                            <img src="img/project-three.jpg" draggable="false">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article class="slide slide--3 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__img">
+                        <figure>
+                            <img src="img/project-two.jpg" draggable="false">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article class="slide slide--1 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__img">
+                        <figure>
+                            <img src="img/project-one.jpg" draggable="false">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article class="slide slide--2 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__img">
+                        <figure>
+                            <img src="img/project-three.jpg" draggable="false">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article class="slide slide--3 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__img">
+                        <figure>
+                            <img src="img/project-two.jpg" draggable="false">
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="scroll-content scroll-content--last" data-scroll-content>
+
+            <article class="slide slide--1 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__sub-title"><span>人像</span></div>
+                    <h1 class="slide__title">
+                        <div class="js-transition-title">写真</div>
+                    </h1>
+                    <div class="slide__img slide__img--proxy"></div>
+                    <div class="slide__project">摄影工作室</div>
+                </div>
+            </article>
+
+            <article class="slide slide--2 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__sub-title"><span>风景</span></div>
+                    <h1 class="slide__title">
+                        <div class="js-transition-title">写实</div>
+                    </h1>
+                    <div class="slide__img slide__img--proxy"></div>
+                    <div class="slide__project">摄影工作室</div>
+                </div>
+            </article>
+
+            <article class="slide slide--3 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__sub-title"><span>婚礼</span></div>
+                    <h1 class="slide__title">幸福</h1>
+                    <div class="slide__img slide__img--proxy"></div>
+                    <div class="slide__project">摄影工作室</div>
+                </div>
+            </article>
+            <article class="slide slide--1 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__sub-title"><span>人像</span></div>
+                    <h1 class="slide__title">
+                        <div class="js-transition-title">写真</div>
+                    </h1>
+                    <div class="slide__img slide__img--proxy"></div>
+                    <div class="slide__project">摄影工作室</div>
+                </div>
+            </article>
+
+            <article class="slide slide--2 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__sub-title"><span>风景</span></div>
+                    <h1 class="slide__title">
+                        <div class="js-transition-title">写实</div>
+                    </h1>
+                    <div class="slide__img slide__img--proxy"></div>
+                    <div class="slide__project">摄影工作室</div>
+                </div>
+            </article>
+
+            <article class="slide slide--3 js-slide">
+                <div class="slide__inner">
+                    <div class="slide__sub-title"><span>婚礼</span></div>
+                    <h1 class="slide__title">幸福</h1>
+                    <div class="slide__img slide__img--proxy"></div>
+                    <div class="slide__project">摄影工作室</div>
+                </div>
+            </article>
+
+
+        </div>
+
+        <div class="scrollbar" data-scrollbar>
+            <div class="scrollbar__handle js-scrollbar__handle"></div>
+        </div>
+
     </div>
-    <script>
-        var images = document.querySelectorAll('.slideshow img');
-        var currentImageIndex = 0;
 
-        function nextImage() {
-            images[currentImageIndex].classList.remove('active');
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            images[currentImageIndex].classList.add('active');
-        }
-
-        setInterval(nextImage, 3000);
-    </script>
+    <div class="mask js-mask">
+        <div class="mask__slice js-mask__slice"></div>
+        <div class="mask__slice js-mask__slice"></div>
+        <div class="mask__slice js-mask__slice"></div>
+        <div class="mask__inner">
+            <figure class="logo logo--mask">
+                <img class="js-logo" src="img/logo.svg">
+            </figure>
+            <div class="mask-line js-mask-line">
+                <div class="mask-line__inner js-mask-line"></div>
+            </div>
+        </div>
+    </div>
 </section>
-<!--轮播图结束-->
-<!--作品集开始-->
-<section>
-    <center><h1>摄影工作室作品集</h1></center>
-    <CENTER><h3><a href="scenery.html">风景</a></h3></CENTER>
-    <div class="gallery">
-        <img src="../../img/作品/风景/1.jpg" alt="作品1">
-        <img src="../../img/作品/风景/2.jpg" alt="作品2">
-        <img src="../../img/作品/风景/3.jpg" alt="作品3">
-        <img src="../../img/作品/风景/4.jpg" alt="作品4">
-    </div>
-    <center><h3><a href="portrait.html">人像</a></h3></center>
-    <div class="gallery">
-        <img src="../../img/作品/人像/1.jpg" alt="作品1">
-        <img src="../../img/作品/人像/5.jpg" alt="作品2">
-        <img src="../../img/作品/人像/7.jpg" alt="作品3">
-        <img src="../../img/作品/人像/8.jpg" alt="作品4">
-    </div>
-</section>
-<!--作品集结束-->
-
-<!--返回顶部-->
-<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
-
-<style>
-    .scroll-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #333;
-        color: #fff;
-        padding: 10px 20px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        border-radius: 50%;
-    }
-
-    .scroll-to-top.show {
-        opacity: 1;
-        visibility: visible;
-    }
-</style>
-<script>
-    function scrollToTop() {
-        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-        if (currentPosition > 0) {
-            window.requestAnimationFrame(scrollToTop);
-            window.scrollTo(0, currentPosition - currentPosition / 8);
-        }
-    }
-
-    function toggleScrollToTop() {
-        var scrollToTopElement = document.getElementById("scrollToTop");
-        var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (currentPosition > 300) {
-            scrollToTopElement.classList.add("show");
-        } else {
-            scrollToTopElement.classList.remove("show");
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function (event) {
-        window.addEventListener("scroll", function () {
-            toggleScrollToTop();
-        });
-    });
-</script>
-<!--返回顶部结束-->
-<footer>
-    <div class="container">
-        <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
-    </div>
-</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+<script src='js/imagesloaded.pkgd.min.js'></script>
+<script src="./js/script.js"></script>
 </body>
 </html>

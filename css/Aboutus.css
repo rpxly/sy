@@ -5,9 +5,11 @@ nav {
     left: 0;
     width: 100%;
     padding: 20px 0;
+    background-color: #fdfafa;
     z-index: 999;
     transition: all 0.3s ease-in-out;
 }
+
 
 .nav-colored a {
     color: #fff;
@@ -47,6 +49,9 @@ nav ul li {
     top: 100%;
     left: 0;
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+
 }
 
 .sub-menu li {
@@ -73,7 +78,7 @@ nav ul li::after {
     content: '';
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #130c0c;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
@@ -143,6 +148,7 @@ p {
 
 /* 首页样式 */
 header {
+    margin-top: -20px;
     background-image: url(../img/bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -195,12 +201,14 @@ header {
     color: #78817d;
     text-decoration: none;
 }
+
 .team-member img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
+
 .team-member img:hover {
     transform: scale(1.1);
 }
@@ -284,6 +292,7 @@ p {
 .team-member p {
     font-size: 14px;
 }
+
 /* 设置社交媒体图标样式 */
 .social-icons {
     list-style: none;

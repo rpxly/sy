@@ -1,117 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"/>
+    <title>服务-TechLens 摄影工作室</title>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>摄影工作室 - 服务</title>
+    <link rel="stylesheet" href="../../css/blog.css"/>
     <link rel="stylesheet" href="../../css/service.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- 引入Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           integrity="sha512-8xk6EET69wUcwp6sfKki6nX7SYmwgmG6Kj7e02MnZxJ3HkMcRHhjrff7Qn+eD8DJNLqIXeOzZfsYgZ0sMD8K7g=="
           crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var posts = document.querySelectorAll('.post');
+
+            // Add hover effect to posts
+            posts.forEach(function (post) {
+                post.addEventListener('mouseenter', function () {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';
+                });
+
+                post.addEventListener('mouseleave', function () {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand">TechLens</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
-                <li><a href="../关于我们/Aboutus.html">关于我们</a></li>
-                <li>
-                    <a href="../作品/works.html">&nbsp;作品集&nbsp;</a>
-                    <ul class="sub-menu">
-                        <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
-                        <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
-                    </ul>
-                </li>
-                <li><a href="../服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
-                <li><a href="../博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
-                <li><a href="../联系我们/Contactus.html">联系我们</a></li>
-            </ul>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
+        <ul class="nav navbar-nav">
+            <li class="no-hover" style="pointer-events: none;">
+                <a href="../../index.html">
+                    <img src="../../img/logo.png" alt="logo" class="logo" width="80px">
+                </a>
+            </li>
+            <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+            <li><a href="../../page/关于我们/Aboutus.html">关于我们</a></li>
+            <li>
+                <a href="../../page/作品/works.html">&nbsp;作品集&nbsp;</a>
+                <ul class="sub-menu">
+                    <li><a href="../../page/作品/scenery.html">风景摄影</a></li>
+                    <li><a href="../../page/作品/portrait.html">人像摄影</a></li>
+                </ul>
+            </li>
+            <li><a href="../../page/服务/service.html">&nbsp;&nbsp;服务&nbsp;&nbsp;</a></li>
+            <li><a href="../../page/博客/blog.html">&nbsp;&nbsp;博客&nbsp;&nbsp;</a></li>
+            <li><a href="../../page/联系我们/Contactus.html">联系我们</a></li>
+        </ul>
+    </div>
+</nav>
+<header>
     <div class="header-content">
         <div class="container">
-            <h1>TechLens摄影工作室</h1>
+            <h1>TechLens 摄影工作室</h1>
+            <p>为您提供更优质的服务</p>
         </div>
     </div>
 </header>
-
-
-<main>
-    <h1>我们提供的服务</h1>
-
-    <div class="service">
-        <div class="service-icon">
-            <img src="../../img/服务/img.png" alt="婚礼摄影">
+<div class="blog-container">
+    <div class="main-content">
+        <div class="post">
+            <div class="service">
+                <div class="service-icon">
+                    <img src="../../img/服务/img.png" alt="婚礼摄影">
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">婚礼摄影</h2>
+                    <p class="service-description">
+                        我们为您的特殊日子捕捉美丽的瞬间。无论是室内还是室外，我们的摄影师会利用专业的技术和创意，为您记录下梦幻般的婚礼瞬间。</p>
+                    <a href="Wedding.html" class="service-link">了解更多</a>
+                </div>
+            </div>
         </div>
-        <div class="service-content">
-            <h2 class="service-title">婚礼摄影</h2>
-            <p class="service-description">
-                我们为您的特殊日子捕捉美丽的瞬间。无论是室内还是室外，我们的摄影师会利用专业的技术和创意，为您记录下梦幻般的婚礼瞬间。</p>
-            <a href="Wedding.html" class="service-link">了解更多</a>
+        <div class="post">
+            <div class="service">
+                <div class="service-icon">
+                    <img src="../../img/服务/img_1.png" alt="人像摄影">
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">人像摄影</h2>
+                    <p class="service-description">
+                        我们提供高品质的人像摄影服务，包括个人肖像、家庭照片、情侣照片等。我们会通过合适的场景和灯光，捕捉出您最真实和自然的一面。</p>
+                    <a href="Portrait.html" class="service-link">了解更多</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="post">
+            <div class="service">
+                <div class="service-icon">
+                    <img src="../../img/服务/img_2.png" alt="商业摄影">
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">商业摄影</h2>
+                    <p class="service-description">
+                        我们为各类商业活动提供专业的摄影服务，包括产品摄影、商业活动摄影、企业形象摄影等。我们将通过精心构图和光线控制，展示出您的产品和品牌的最佳形象。</p>
+                    <a href="Commercial.html" class="service-link">了解更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="service">
+                <div class="service-icon">
+                    <img src="../../img/服务/img_3.png" alt="活动摄影">
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">活动摄影</h2>
+                    <p class="service-description">
+                        我们可以为各种活动提供全面的摄影覆盖，包括会议、展览、庆典等。我们的摄影师会记录下活动中的重要时刻和精彩瞬间，为您留下珍贵的回忆。</p>
+                    <a href="#" class="service-link">了解更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+
+            <div class="service">
+                <div class="service-icon">
+                    <img src="../../img/服务/img_4.png" alt="风景摄影">
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">风景摄影</h2>
+                    <p class="service-description">
+                        我们热爱捕捉大自然的美丽景色。无论是山川湖海还是城市风景，我们的摄影师会利用摄影技巧和艺术感触，为您呈现出壮丽的风景照片。</p>
+                    <a href="#" class="service-link">了解更多</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="service">
-        <div class="service-icon">
-            <img src="../../img/服务/img_1.png" alt="人像摄影">
-        </div>
-        <div class="service-content">
-            <h2 class="service-title">人像摄影</h2>
-            <p class="service-description">
-                我们提供高品质的人像摄影服务，包括个人肖像、家庭照片、情侣照片等。我们会通过合适的场景和灯光，捕捉出您最真实和自然的一面。</p>
-            <a href="#" class="service-link">了解更多</a>
-        </div>
-    </div>
-    <div class="service">
-        <div class="service-icon">
-            <img src="../../img/服务/img_2.png" alt="商业摄影">
-        </div>
-        <div class="service-content">
-            <h2 class="service-title">商业摄影</h2>
-            <p class="service-description">
-                我们为各类商业活动提供专业的摄影服务，包括产品摄影、商业活动摄影、企业形象摄影等。我们将通过精心构图和光线控制，展示出您的产品和品牌的最佳形象。</p>
-            <a href="#" class="service-link">了解更多</a>
-        </div>
-    </div>
-
-    <div class="service">
-        <div class="service-icon">
-            <img src="../../img/服务/img_3.png" alt="活动摄影">
-        </div>
-        <div class="service-content">
-            <h2 class="service-title">活动摄影</h2>
-            <p class="service-description">
-                我们可以为各种活动提供全面的摄影覆盖，包括会议、展览、庆典等。我们的摄影师会记录下活动中的重要时刻和精彩瞬间，为您留下珍贵的回忆。</p>
-            <a href="#" class="service-link">了解更多</a>
-        </div>
-    </div>
-
-    <div class="service">
-        <div class="service-icon">
-            <img src="../../img/服务/img_4.png" alt="风景摄影">
-        </div>
-        <div class="service-content">
-            <h2 class="service-title">风景摄影</h2>
-            <p class="service-description">
-                我们热爱捕捉大自然的美丽景色。无论是山川湖海还是城市风景，我们的摄影师会利用摄影技巧和艺术感触，为您呈现出壮丽的风景照片。</p>
-            <a href="#" class="service-link">了解更多</a>
-        </div>
-    </div>
-</main>
+</div>
 <!--返回顶部-->
 <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
 
@@ -163,6 +195,9 @@
 </script>
 <!--返回顶部结束-->
 <footer>
+    <center>
+        <div id="clock" class="clock"></div>
+    </center>
     <div class="container">
         <p>版权所有 &copy; 2023 TechLens 摄影工作室</p>
     </div>
