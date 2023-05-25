@@ -5,67 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="../../css/contactus.css"/>
+    <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- 引入Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.min.css"/>
-    `
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    <link rel="stylesheet" href="../../css/masonry.min.css"/>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../css/animate.min.css"
           integrity="sha512-8xk6EET69wUcwp6sfKki6nX7SYmwgmG6Kj7e02MnZxJ3HkMcRHhjrff7Qn+eD8DJNLqIXeOzZfsYgZ0sMD8K7g=="
           crossorigin="anonymous"/>
-    <script type="text/javascript ">
-        window.onresize = auto;
-        auto()
-
-        function auto() {
-            var deviceWidth = document.documentElement.clientWidth;//获取设备宽度
-            if (deviceWidth > 1400) deviceWidth = 1400;//设置最大宽度
-            document.documentElement.style.fontSize = deviceWidth / 14 + 'px';//设置根元素字体大小
-        }
-
-        document.addEventListener('mousewheel', function (e) {
-            e = e || window.event;
-            if ((e.wheelDelta && event.ctrlKey) || e.detail) {//判断浏览器IE，谷歌滑轮事件
-                event.preventDefault();//阻止默认事件
-            }
-        }, {
-            capture: false,//是否捕获事件
-            passive: false//是否阻止默认事件
-        });
-
-
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function (e) {
-            if (e.keyCode == 123) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
-                alert("禁止查看源码");
-                return false;
-            }
-        }
-    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function (event) {
@@ -87,12 +34,10 @@
             </button>
         </div>
         <ul class="nav navbar-nav">
-            <li style="pointer-events: none;">
-                <a href="../../index.html">
-                    <img src="../../img/logo.png" alt="logo" class="logo" width="80px">
-                </a>
+            <li>
+                <a href="../../index.html" ><img src="../../img/logo.png" alt="TechLens" width="150px" height="35px"></a>
             </li>
-            <li><a href="../../index.html">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
+            <li></li>
             <li><a href="../../page/关于我们/Aboutus.html">关于我们</a></li>
             <li>
                 <a href="../../page/作品/works.html">&nbsp;作品集&nbsp;</a>
@@ -154,7 +99,7 @@
     </div>
 </div>
 <!--返回顶部-->
-<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></div>
 
 <style>
     .scroll-to-top {
@@ -211,10 +156,10 @@
 
 
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../../js/jquery-3.6.0.js"></script>
 
 <!-- Bootstrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 
 </body>
